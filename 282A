@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+auto dev = []() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    return 'c';
+};
+int ans = 0;
+
+void solve(string arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == "++X" || arr[i] == "X++") ans++;
+        else if (arr[i] == "--X" || arr[i] == "X--") ans--;
+    }
+}
+
+int main() {
+    dev();
+    int n;
+    cin >> n;
+    string arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    solve(arr, n);
+    cout << ans;
+    return 0;
+}
