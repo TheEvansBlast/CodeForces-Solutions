@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(int m, int n){
+    int total =  m* n;
+    cout << total/ 2;
+}
+
+int main()
+{
+    int m, n;
+    cin >> m >> n;
+    solve(m, n);
+    return 0;
+}
